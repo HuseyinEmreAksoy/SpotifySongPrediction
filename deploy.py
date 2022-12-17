@@ -331,8 +331,8 @@ for i, (data, target) in enumerate(test_loader):
         preds = np.concatenate((preds, pred), axis=0)
         targets = np.concatenate((targets, target.detach().cpu().numpy()), axis=0)
 
-val_loss_best = val_loss_best / len(test_loader.dataset)
-val_loss_best
+#val_loss_best = val_loss_best / len(test_loader.dataset)
+#val_loss_best
 
 
 # In[ ]:
@@ -561,7 +561,7 @@ for i in range(len(genre_to_class)):
     # print(CMs[i])
     counts.append(np.sum(CMs[i]))
     accuracies.append(100 * np.trace(CMs[i]) / np.sum(CMs[i]))
-np.dot(counts, accuracies) / np.sum(counts)
+#np.dot(counts, accuracies) / np.sum(counts)
 
 
 # In[ ]:
@@ -681,8 +681,8 @@ type(fea)
 fea = fea.to_numpy()
 type(fea)
 
-st.subheader('in')
-a = st.button('deneme')
+st.subheader('Value')
+a = st.button('value')
 if a:
 
 # In[54]:
